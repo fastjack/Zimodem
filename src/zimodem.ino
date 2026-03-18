@@ -38,7 +38,7 @@ const char compile_date[] = __DATE__ " " __TIME__;
 // Figure out whether we are building for ESP8266 or ESP32
 #if defined(ARDUINO_ESP32_DEV) || defined(ARDUINO_ARCH_ESP32)
 # define ZIMODEM_ESP32
-#elif defined(ARDUINO_ESP32S3_DEV) || defined(ARDUINO_ESP32C3_DEV)
+#elif defined(ARDUINO_ESP32S3_DEV)
 # define ZIMODEM_ESP32
 #elif defined(ESP32)
 # define ZIMODEM_ESP32
@@ -51,6 +51,8 @@ const char compile_date[] = __DATE__ " " __TIME__;
 #elif defined(ARDUINO_ESPea32)
 # define ZIMODEM_ESP32
 #elif defined(ARDUINO_QUANTUM)
+# define ZIMODEM_ESP32
+#elif defined(ARDUINO_ESP32C3_DEV) || defined(SEEED_XIAO_ESP32C3)
 # define ZIMODEM_ESP32
 #else
 # define ZIMODEM_ESP8266
@@ -107,7 +109,7 @@ const char compile_date[] = __DATE__ " " __TIME__;
 #  define DEFAULT_PIN_TXD GPIO_NUM_32
 #  define DEFAULT_PIN_RXD GPIO_NUM_33
 #  define DEFAULT_PIN_SND GPIO_NUM_4
-# elif defined(ARDUINO_ESP32C3_DEV)   /* Configuration for the Esp32C3 4MB Dev Board */
+# elif defined(ARDUINO_ESP32C3_DEV) /* Configuration for the Esp32C3 4MB Dev Board */
 #  undef INCLUDE_SD_SHELL
 #  undef PIN_FACTORY_RESET
 #  define DEFAULT_PIN_DCD GPIO_NUM_8
@@ -117,6 +119,17 @@ const char compile_date[] = __DATE__ " " __TIME__;
 #  define DEFAULT_PIN_DSR GPIO_NUM_4
 #  define DEFAULT_PIN_SND GPIO_NUM_6
 #  define DEFAULT_PIN_OTH GPIO_NUM_7 // pulse pin
+#  define DEFAULT_PIN_DTR GPIO_NUM_5
+# elif defined(SEEED_XIAO_ESP32C3)   /* Configuration for the Seeed XIAO ESP32C3 4MB Dev Board */
+#  undef INCLUDE_SD_SHELL
+#  undef PIN_FACTORY_RESET
+#  define DEFAULT_PIN_DCD GPIO_NUM_8
+#  define DEFAULT_PIN_CTS GPIO_NUM_3 // espdev rts pin
+#  define DEFAULT_PIN_RTS GPIO_NUM_2 // espdev cts pin
+#  define DEFAULT_PIN_RI GPIO_NUM_1
+#  define DEFAULT_PIN_DSR GPIO_NUM_4
+#  define DEFAULT_PIN_SND -1
+#  define DEFAULT_PIN_OTH -1
 #  define DEFAULT_PIN_DTR GPIO_NUM_5
 # elif defined(ARDUINO_ESP32S3_DEV) /* Configuration for the Esp32S3 16MB Dev Board */
 #  define DEFAULT_PIN_DCD GPIO_NUM_5
