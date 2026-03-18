@@ -1,4 +1,4 @@
-Zimodem 4.0 (C)2016-2025 Bo Zimmerman\
+Zimodem 4.0 (C)2016-2026 Bo Zimmerman\
 Please read the LICENSE file for license information\
 Please read the NOTICE file for credits information\
 
@@ -16,7 +16,7 @@ To build this firmware for the ESP-01 or ESP-12, I used the **Arduino IDE rev1.8
 
 ## ESP-32
 
-To build this firmware for the ESP-32, I also used the **Arduino IDE rev 1.8.10** with the **Arduino ESP32 Dev Module** installed from the board manager with the following settings: QIO, 8MB, 80MHZ, 921600, NONE, Avrisp Mk II, and 3MB App space.  Currently on library version **2.07**. 
+To build this firmware for the ESP-32, I also used the **Arduino IDE rev 1.8.10** with the **Arduino ESP32 Dev Module** installed from the board manager with the following settings: QIO, 8MB, 80MHZ, 921600, NONE, Avrisp Mk II, and 3MB App space.  Currently on library version **2.0.17**. 
 
 **NOTE:** Before you build, you'll want to go through the file `zimodem.ino` and configure the various `#define`s to reflect hardware pin assignments and features.   These especially include: `INCLUDE_IRCC`, `SUPPORT_LED_PINS`, `INCLUDE_SD_SHELL`, `INCLUDE_OTH_UPDATES`, `DEFAULT_BAUD_RATE`, `PIN_FACTORY_RESET`, all the various `DEFAULT_PIN_*` assignments for your hardware, `INCLUDE_SSH`, and `MAX_PIN_NO`.   In addition, at the top of `pet2asc.h` is where the default main and debug uarts are assigned (`MAIN_UART_NUM`).  Make sure those reflect your wiring as well. 
 
@@ -50,6 +50,10 @@ If you want to operate at a higher baud, you'll want to enter `ATB9600` (or what
 `AT+HOSTCM`: For modems with SD-cards, this puts the modem into HOSTCM protocol mode for reading/writing directly to the card (for Commodore SupetPET SP9000). `+++` to exit.
 
 `AT+1650`, `1660`, `1670`: Puts the modem into a emulation mode for Commodore 1650, 1660, and 1670.  Changes baud rates accordingly.  Use `AT&L` or `AT&F` to clear emulation settings.
+
+`AT+SLIP`: Puts the modem into SLIP mode (or `ATDT5517545`).  Baud rates under 57600 will not receive broadcast/multicast packets.  Reset modem to exit.
+
+`AT+PPP`: Puts the modem into PPP mode (or `ATDT5517546`).  Baud rates under 57600 will not receive broadcast/multicast packets.  Reset modem to exit.
 
 ### Telnet Dialing
 
