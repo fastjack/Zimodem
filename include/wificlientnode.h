@@ -40,7 +40,7 @@ static WiFiClient *createWiFiClient(bool SSL)
   return new WiFiClient();
 }
 
-typedef struct Packet
+struct Packet
 {
   uint8_t num = 0;
   uint16_t len = 0;
