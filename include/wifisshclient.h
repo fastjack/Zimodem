@@ -17,8 +17,8 @@
 #include "Arduino.h"
 #include "IPAddress.h"
 #include <WiFi.h>
-#include "src/libssh2/libssh2_config.h"
-#include "src/libssh2/libssh2.h"
+#include <libssh2_config.h>
+#include <libssh2.h>
 
 class WiFiSSHClient : public WiFiClient
 {
