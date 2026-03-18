@@ -1527,23 +1527,23 @@ ZResult ZCommand::doUpdateFirmware(int vval, uint8_t *vbuf, int vlen, bool isNum
   int bufSize = 254;
   char firmwareName[100];
 #if USE_DEVUPDATER
-  char *updaterHost = "192.168.1.10";
+  const char *updaterHost = "192.168.1.10";
   int updaterPort = 8080;
 #else
 # if INCLUDE_CMDRX16
-   char *updaterHost = "www.zimmers.net"; // changeme!
+   const char *updaterHost = "www.zimmers.net"; // changeme!
 # else
-   char *updaterHost = "www.zimmers.net";
+   const char *updaterHost = "www.zimmers.net";
 # endif
   int updaterPort = 80;
 #endif
 #if INCLUDE_CMDRX16
-  char *updaterPrefix = "/otherprojs/x16";
+  const char *updaterPrefix = "/otherprojs/x16";
 #else
 # ifdef ZIMODEM_ESP32
-   char *updaterPrefix = "/otherprojs/guru2";
+   const char *updaterPrefix = "/otherprojs/guru2";
 # else
-  char *updaterPrefix = "/otherprojs/c64net2";
+  const char *updaterPrefix = "/otherprojs/c64net2";
 # endif
 #endif
   sprintf(firmwareName,"%s-latest-version.txt",updaterPrefix);
