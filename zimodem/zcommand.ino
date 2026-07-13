@@ -1984,7 +1984,7 @@ ZResult ZCommand::doPhonebookCommand(unsigned long vval, uint8_t *vbuf, int vlen
     *comma=0;
     notes = comma+1;
   }
-  if(!PhoneBookEntry::checkPhonebookEntry(colon))
+  if(!PhoneBookEntry::checkPhonebookEntry(colon+1))
       return ZERROR;
   if(found != null)
     delete found;
