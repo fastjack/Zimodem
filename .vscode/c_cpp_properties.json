@@ -10,6 +10,7 @@
             "includePath": [
                 "/Users/fastjack/Developer/Retro/Zimodem-pio/include",
                 "/Users/fastjack/Developer/Retro/Zimodem-pio/src",
+                "/Users/fastjack/Developer/Retro/Zimodem-pio/lib/libssh2/src",
                 "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                 "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
@@ -213,7 +214,6 @@
                 "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/dio_qspi/include",
                 "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                 "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/variants/esp32",
-                "/Users/fastjack/Developer/Retro/Zimodem-pio/lib/libssh2",
                 "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                 "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                 "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
@@ -247,6 +247,7 @@
                 "path": [
                     "/Users/fastjack/Developer/Retro/Zimodem-pio/include",
                     "/Users/fastjack/Developer/Retro/Zimodem-pio/src",
+                    "/Users/fastjack/Developer/Retro/Zimodem-pio/lib/libssh2/src",
                     "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                     "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "/Users/fastjack/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
