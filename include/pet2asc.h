@@ -22,7 +22,7 @@
 # include "SD.h"
 # include "SPI.h"
 # include "driver/uart.h"
-# if defined(ARDUINO_ESP32C3_DEV)
+# if defined(ARDUINO_ESP32C3_DEV) || defined(SEEED_XIAO_ESP32C3)
 #   define MAIN_UART_NUM UART_NUM_0
 #   define DEBUG_UART_NUM -1
 # elif defined(ARDUINO_ESP32S3_DEV) || (!defined(UART_NUM_2))

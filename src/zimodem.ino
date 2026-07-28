@@ -126,7 +126,7 @@ const char compile_date[] = __DATE__ " " __TIME__;
 #  define DEFAULT_PIN_DCD GPIO_NUM_8
 #  define DEFAULT_PIN_CTS GPIO_NUM_3 // espdev rts pin
 #  define DEFAULT_PIN_RTS GPIO_NUM_2 // espdev cts pin
-#  define DEFAULT_PIN_RI GPIO_NUM_1
+#  define DEFAULT_PIN_RI GPIO_NUM_6
 #  define DEFAULT_PIN_DSR GPIO_NUM_4
 #  define DEFAULT_PIN_SND -1
 #  define DEFAULT_PIN_OTH -1
